@@ -1,0 +1,120 @@
+% -------------------- Spracheinstellungen --------------------
+
+% Sprachpaket laden
+\usepackage[ngerman]{babel}
+
+% Umlaute
+\usepackage[utf8]{inputenc} % Eingaben von Sonderzeichen codieren
+\usepackage[T1]{fontenc} % deutsche Sonderzeichen als Schrift encodieren
+
+% Bezeichnungen ändern
+\addto{\captionsngerman}{%
+  \renewcommand*{\contentsname}{Inhaltsverzeichnis} % Titel des Inhalsverzeichnisses ändern
+  \renewcommand*{\listfigurename}{Abbildungsverzeichnis} % Titel des Abbildungsverzeichnisses ändern
+  \renewcommand*{\listtablename}{Tabellen} % Titel des Tabellenverzeichnisses ändern
+  \renewcommand*{\figurename}{Abb.} % Kürzel für Abbildungen festlegen
+  \renewcommand*{\tablename}{Tab.} % Kürzel für Tabellen festlegen
+  \renewcommand*{\abstractname}{Kurzreferat} % Titel für Zusammenfassungsseite (Abstract) festlegen
+}
+
+
+% -------------------- Seiteneinstellungen --------------------
+
+% Seitenränder definieren
+\newcommand{\sroben}{2.5cm} % Seitenrand oben
+\newcommand{\srunten}{3cm} % Seitenrand unten
+\newcommand{\srlinks}{2cm} % Seitenrand links
+\newcommand{\srrechts}{2cm} % Seitenrand rechts
+
+% Seitenränder anwenden, Header & Footer deaktivieren
+\usepackage[\seitenformat,left=\srlinks,right=\srrechts,top=\sroben,bottom=\srunten,nohead,nofoot]{geometry}
+
+% Automatische Silbentrennung aktivieren
+\usepackage[document]{ragged2e}
+
+% Seitenzahlen entfernen
+\pagestyle{empty}
+
+% Auflösung für Bilder in der *.pdf festlegen in DPI
+\pdfimageresolution=300
+
+
+% -------------------- Farben --------------------
+
+% Faben definieren
+\definecolor{blk}{HTML}{000000}
+\definecolor{gr}{HTML}{494949}
+\definecolor{bluish}{HTML}{0098A1}
+
+
+% -------------------- Schrifteinstellungen --------------------
+
+% Palatino als Schrift für das ganze Dokument festlegen
+\usepackage{palatino}
+
+% Schriftgröße der Überschriften festlegen
+\newcommand{\fssec}{12} % Schriftgröße für Sektionsüberschrift 1
+\newcommand{\fssubsec}{12} % Schriftgröße für Sektionsüberschrift 2
+\newcommand{\fssubsubsec}{12} % Schriftgröße für Sektionsüberschrift 3
+
+% Schriftgrößen auf Überschriften übernehmen
+\sectionfont{\fontsize{\fssec}{15}\selectfont}
+\subsectionfont{\fontsize{\fssubsec}{15}\selectfont}
+\subsubsectionfont{\fontsize{\fssubsubsec}{15}\selectfont}
+
+% Bilduntertitel formatieren
+\usepackage[font=footnotesize, % Schriftgröße 10
+            format=plain, 
+            justification=centering, % zentrieren
+            singlelinecheck=off, % Mehrzeiligkeit erlaubt
+            labelfont={bf,it}, % Bez. Fett und Kursiv
+            textfont=it]{caption} % Text nur Kursiv
+
+
+% -------------------- Abstände --------------------
+
+% Zeilenabstand festlegen
+\setstretch{1,33}
+
+% Abstände zwischen Titeln und Fließtext
+\usepackage[compact]{titlesec}
+%\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing{\section}{0pt}{28pt}{10pt}
+\titlespacing{\subsection}{0pt}{16pt}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+% Abstände von Bilduntertiteln definieren
+\setlength{\intextsep}{0pt}
+\abovecaptionskip=4pt
+\belowcaptionskip=2pt
+
+
+% -------------------- Fußnoten --------------------
+
+% Fußnoteneinzug rechts entfernen
+
+
+% Seitenzahlen vollständig entfernen
+%\pagenumbering{gobble}
+
+% Verweise formatieren
+\renewcommand{\footnoterule}{
+                                \color{gr} % Farbe von Verweisetext festlegen
+                                \textcolor{bluish}{\rule{6cm}{1pt}} % Farbe und Abmessungen des Trennstrichs festlegen
+                            }
+                            
+% Abstände von Verweisen konfigurieren
+\addtolength{\skip\footins}{6pt}
+\let\oldfootnoterule\footnoterule
+\def\footnoterule{\vskip-6pt\oldfootnoterule \vskip6pt\relax}
+%\setlength{\footnotesep}{12pt}
+
+
+% -------------------- Fußnoten --------------------
+
+% Kurzzusammenfassung formatieren
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries}
+\renewcommand{\absnamepos}{flushleft}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}

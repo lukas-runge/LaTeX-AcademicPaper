@@ -1,0 +1,64 @@
+% -------------------- Variablen definieren --------------------
+\input{files/variable.tex}
+
+
+% -------------------- Dokument beginnen ---------------------
+\documentclass[\schriftgroesse,\seitenformat]{article}
+
+
+% -------------------- Importieren von Paketen --------------------
+
+% Blindtextpakete laden
+\usepackage{blindtext}
+\usepackage{lipsum}
+
+% Fußnote bändigen
+\usepackage[hang,flushmargin]{footmisc} 
+
+% Mehrzeilige Kommentare
+\usepackage{verbatim}   
+
+% Paket um einfach Zeilenabstände festzulegen
+\usepackage{setspace}
+
+% Paket um Bilder einbinden zu können
+\usepackage{graphicx} % Bilder grundsätzlich einbinden können
+\usepackage{wrapfig} % Bilder Textumfließend einbinden können
+
+% Pakete zur einfacheren Formatanpassung
+\usepackage{texilikechaps}
+\usepackage{sectsty}
+
+% Farbe - Yayyy
+\usepackage{color}
+\usepackage{xcolor}
+
+% -------------------- Imporieren der selbsterstellten Funktionen --------------------
+\input{files/func.tex}
+
+
+% -------------------- Importieren der Konfiguration --------------------
+\input{files/config.tex}
+
+
+% -------------------- Importieren der Formatvorgaben --------------------
+\input{files/format.tex}
+
+
+% -------------------- Importieren des Glossars --------------------
+\input{files/glossar.tex}
+
+
+% -------------------- Festlegen der Zitierweise --------------------
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[backend=biber, sorting=nyt]{biblatex}
+\bibliography{bib/literatur}
+
+% -------------------- Inhaltlicher Beginn des Dokuments --------------------
+\begin{document}
+
+% Importiern des wiss. Inhalts
+\input{content.tex}
+
+\end{document}

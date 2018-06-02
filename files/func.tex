@@ -1,0 +1,33 @@
+% Bild zum Einfügenen einer textumflossenden Grafik  
+
+\newcommand{\warpfig}[5]{
+\begin{wrapfigure}{#5}{#2\textwidth}
+    \centering
+    \vspace{-1pt}
+    \includegraphics[width=#2\textwidth]{\bildordner/#1}
+    \caption{#3}
+    \label{fig:#4}
+\end{wrapfigure}}
+
+% --------------------
+
+
+
+% Umbruch einfügen 
+
+\newcommand{\br}{\leavevmode \newline}
+
+% --------------------
+
+% Bild zum Einfügenen einer Grafik
+
+\newcommand{\Bild}[5]{
+    \begin{figure}[htbp]
+    \centering
+    \vspace{#5pt}
+     \includegraphics[width=#2\textwidth]{\bildordner/#1}
+    \caption{#3}
+    \label{fig:#4}
+\end{figure}}
+
+% --------------------

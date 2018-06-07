@@ -1,12 +1,20 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Rede Giovanni Trapattoni '98}{4}{section.1}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Was erlauben Strunz?}{4}{subsection.1.1}
+\contentsline {section}{\numberline {2}Hauptteil}{4}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Obwohl er schon fertig hatte}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {2.1}Rede Giovanni Trapattoni '98}{4}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Obwohl er schon fertig hatte}{6}{section.2}
+\contentsline {subsubsection}{\numberline {2.1.1}Was erlauben Strunz?}{4}{subsubsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Blindtext}{6}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Obwohl er schon fertig hatte}{5}{subsubsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Obwohl er schon fertig hatte}{6}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1}Blindtext}{6}{subsubsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Zusammenfassung und Fazit}{7}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Ausblick}{8}{section.4}

@@ -29,9 +29,15 @@
 \usepackage{texilikechaps}
 \usepackage{sectsty}
 
+% Use Lists
+\usepackage{paralist}
+
 % Farbe - Yayyy
 \usepackage{color}
 \usepackage{xcolor}
+
+% IH
+%\usepackage{tocbibind}
 
 % -------------------- Imporieren der selbsterstellten Funktionen --------------------
 \input{files/func.tex}
@@ -50,9 +56,74 @@
 
 
 % -------------------- Festlegen der Zitierweise --------------------
+
+%\begin{filecontents}{biblatex-dm.cfg}
+%\DeclareDatamodelFields[type=field,datatype=verbatim,nullok=true]{breakurl}
+%\DeclareDatamodelEntryfields{breakurl}
+%\DeclareFieldFormat[online]{breakurl}{}% Used as a boolean variable
+%\end{filecontents}
+
 \usepackage{hyperref}
 \usepackage{csquotes}
 \usepackage[backend=biber, sorting=nyt]{biblatex}
+
+%\DeclareFieldFormat[online]{urldate}{\mkbibemph{#1}}
+\appto{\biburlsetup}{\renewcommand*{\UrlFont}{\normalfont}}
+
+\AtEveryCitekey{%
+\ifentrytype{online}{
+    \clearfield{url}%
+    \clearfield{urlyear}
+    \clearfield{userb}
+}{}
+}
+
+\AtEveryBibitem{%
+\ifentrytype{online}{
+    \clearfield{usera}%
+}{}
+}
+
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+      \map{
+        \step[fieldsource=shorturl]
+        \step[fieldset=usera,origfieldval]
+    }
+    \map{
+        \step[fieldsource=urltime]
+        \step[fieldset=userb,origfieldval]
+    }
+  }
+}
+
+\DeclareFieldFormat{usera}{\normalfont{#1}}
+
+\DeclareFieldFormat{userb}{#1 Uhr)}
+
+\DeclareFieldFormat{title}{#1\adddot}
+\DeclareFieldFormat{urldate}{\newline\vspace{-2px}(#1 - }
+\DeclareFieldFormat{url}{#1}
+
+\renewcommand*{\finentrypunct}{}
+
+
+
+\DeclareBibliographyDriver{online}{%
+  \printfield{url}
+  \printfield{usera}
+  \printurldate
+  \printfield{userb}
+  \finentry
+  }
+
+
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
+\renewcommand{\bibfootnotewrapper}[1]{%
+  \bibsentence #1}
+
 \bibliography{bib/literatur}
 
 % -------------------- Inhaltlicher Beginn des Dokuments --------------------

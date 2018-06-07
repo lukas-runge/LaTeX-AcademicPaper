@@ -42,6 +42,24 @@
       \field{year}{2018}
       \field{dateera}{ce}
     \endentry
+    \entry{q_2}{online}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labeltitlesource}{title}
+      \field{title}{Facebook.com}
+      \field{urlday}{2}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{usera}{https://www.facebook.com/}
+      \field{userb}{21:53}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.facebook.com/
+      \endverb
+      \verb{url}
+      \verb https://www.facebook.com/
+      \endverb
+    \endentry
     \entry{q_1}{online}{}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
@@ -50,6 +68,8 @@
       \field{urlday}{2}
       \field{urlmonth}{6}
       \field{urlyear}{2018}
+      \field{usera}{https://www.google.com/}
+      \field{userb}{19:53}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.google.com/

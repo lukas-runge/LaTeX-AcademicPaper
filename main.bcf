@@ -522,6 +522,16 @@
   </bcf:datafieldset>
   <!-- SOURCEMAP -->
   <bcf:sourcemap>
+    <bcf:maps datatype="bibtex" level="user">
+      <bcf:map>
+        <bcf:map_step map_field_source="shorturl"/>
+        <bcf:map_step map_field_set="usera" map_origfieldval="1"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_field_source="urltime"/>
+        <bcf:map_step map_field_set="userb" map_origfieldval="1"/>
+      </bcf:map>
+    </bcf:maps>
     <bcf:maps datatype="bibtex" level="driver">
       <bcf:map>
         <bcf:map_step map_field_set="day" map_null="1"/>
@@ -1977,6 +1987,7 @@
     <bcf:citekey order="1">l_1</bcf:citekey>
     <bcf:citekey order="2">a_1</bcf:citekey>
     <bcf:citekey order="3">q_1</bcf:citekey>
+    <bcf:citekey order="4">q_2</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
